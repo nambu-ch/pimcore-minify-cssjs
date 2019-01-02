@@ -1,0 +1,31 @@
+{
+  "name": "nambu-ch/pimcore-minify-cssjs",
+  "type": "pimcore-bundle",
+  "license": "GPL-3.0+",
+  "description": "Pimcore 5.x CSS and JS minifier",
+  "keywords": ["pimcore", "js", "css", "minification"],
+  "homepage": "https://github.com/nambu-ch/pimcore-minify-cssjs",
+  "authors": [
+    {
+      "name": "nambu GmbH Lukas Schnieper",
+      "email": "ls@nambu.ch",
+      "homepage": "https://www.nambu.ch/",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "MinifyCssJsBundle\\": "src/MinifyCssJsBundle"
+    }
+  },
+  "extra": {
+    "pimcore": {
+      "bundles": [
+        "MinifyCssJsBundle\\MinifyCssJsBundle"
+      ]
+    }
+  },
+  "require": {
+    "matthiasmullie/minify": "1.3.61"
+  }
+}

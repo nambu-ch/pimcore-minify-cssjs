@@ -1,0 +1,14 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  minifycssjs.templating.helper.headlink:
+    class: MinifyCssJsBundle\Templating\Helper\HeadLink
+    tags:
+    - { name: templating.helper, alias: headLink }
+
+  minifycssjs.templating.helper.headscript:
+    class: MinifyCssJsBundle\Templating\Helper\HeadScript
+    tags:
+    - { name: templating.helper, alias: headScript }
