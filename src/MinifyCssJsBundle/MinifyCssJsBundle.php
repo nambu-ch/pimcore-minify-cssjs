@@ -8,7 +8,7 @@ class MinifyCssJsBundle extends AbstractPimcoreBundle {
 
     use PackageVersionTrait;
 
-    const PACKAGE_NAME = 'nambu.ch/pimcore-minify-cssjs';
+    const PACKAGE_NAME = 'nambu-ch/pimcore-minify-cssjs';
 
     protected function getComposerPackageName(): string
     {

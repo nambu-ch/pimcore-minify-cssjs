@@ -3,6 +3,9 @@ services:
     autowire: true
     autoconfigure: true
 
+  minifycssjsbundle.install.installer:
+    class: MinifyCssJsBundle\Install\Installer
+
   minifycssjs.templating.helper.headlink:
     class: MinifyCssJsBundle\Templating\Helper\HeadLink
     tags:
