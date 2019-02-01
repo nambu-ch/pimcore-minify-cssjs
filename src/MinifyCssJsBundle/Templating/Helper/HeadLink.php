@@ -56,7 +56,7 @@ class HeadLink extends \Pimcore\Templating\Helper\HeadLink {
                     $timestamps[] = filemtime(PIMCORE_WEB_ROOT.$src);
                 }
                 $file = PIMCORE_WEB_ROOT.$this->tmpPath.'/fc_'.md5(json_encode($styles)).".css";
-                if (is_file($file) && filemtime($file) < max($timestamps)) {
+                if (is_file($file) && count($timestamps) > 0 && filemtime($file) < max($timestamps)) {
                     unlink($file);
                 }
             } else {
