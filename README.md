@@ -1,5 +1,5 @@
 # Pimcore MinifyCssJsBundle
-Pimcore 5.x package which automatically joins and minifies css and js files. Helpful when mod_pagespeed 
+Pimcore 5.x/6.x package which automatically joins and minifies css and js files. Helpful when mod_pagespeed 
 is not available.
 
 ## Install and Enable
