@@ -44,7 +44,7 @@ class HeadScript extends \Pimcore\Templating\Helper\HeadScript {
                 continue;
             }
 
-            if (in_array("src", $item->attributes) && strpos($item->attributes["src"], 'http') !== 0 && strpos($item->attributes["src"], '//') !== 0) {
+            if (isset($item->attributes["src"]) && strpos($item->attributes["src"], 'http') !== 0 && strpos($item->attributes["src"], '//') !== 0) {
                 $combine[] = $item->attributes["src"];
                 if (\Pimcore::inDebugMode()) {
                     if ($this->isCacheBuster()) {
