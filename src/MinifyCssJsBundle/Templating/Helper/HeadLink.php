@@ -66,11 +66,11 @@ class HeadLink extends \Pimcore\Templating\Helper\HeadLink {
                     foreach ($styles as $src) {
                         $minifier->add(PIMCORE_WEB_ROOT.$src);
                     }
-                    $css = $minifier->minify();
+                    $css = $minifier->minify(PIMCORE_WEB_ROOT.$file);
                     if (stripos($css, "@charset") !== false) {
                         $css = '@charset "UTF-8";' . PHP_EOL . str_replace(['@charset "UTF-8";', "@charset 'UTF-8';"], ["", ""], $css);
+                        file_put_contents(PIMCORE_WEB_ROOT.$file, $css);
                     }
-                    file_put_contents(PIMCORE_WEB_ROOT.$file, $css);
                 }
 
                 //append minified stylesheet
