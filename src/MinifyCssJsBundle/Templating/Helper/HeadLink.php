@@ -68,7 +68,7 @@ class HeadLink extends \Pimcore\Templating\Helper\HeadLink {
                     }
                     $css = $minifier->minify(PIMCORE_WEB_ROOT.$file);
                     if (stripos($css, "@charset") !== false) {
-                        $css = '@charset "UTF-8";' . PHP_EOL . str_replace(['@charset "UTF-8";', "@charset 'UTF-8';"], ["", ""], $css);
+                        $css = '@charset "UTF-8";' . PHP_EOL . str_replace(['@charset "UTF-8";', "@charset 'UTF-8';", '@charset "UTF-8"', "@charset 'UTF-8'"], ["", "", "", ""], $css);
                         file_put_contents(PIMCORE_WEB_ROOT.$file, $css);
                     }
                 }
