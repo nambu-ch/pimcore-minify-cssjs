@@ -15,3 +15,9 @@ services:
     class: MinifyCssJsBundle\Templating\Helper\HeadScript
     tags:
     - { name: templating.helper, alias: headScript }
+
+  Pimcore\Twig\Extension\Templating\HeadLink:
+    class: MinifyCssJsBundle\Templating\Helper\HeadLink
+
+  Pimcore\Twig\Extension\Templating\HeadScript:
+    class: MinifyCssJsBundle\Templating\Helper\HeadScript
